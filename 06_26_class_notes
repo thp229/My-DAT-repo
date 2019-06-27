@@ -1,0 +1,35 @@
+#The Command Line:
+
+##useful for doing anything with git
+# "git --version" tells us current version of git
+
+##basic commands##
+# --"mkdir" creates a folder
+# --"rmdir" deletes a folder
+# --"touch" creates a file inside of a folder
+
+# --"cd" change directory
+# --"ls" list the contents of a directory
+# --"pwd" get the present working directory
+# --"cd .." move up one layer in the file tree
+# -- "cd ../.." move up two layers in the file tree
+
+#Version Control & Git:
+
+#primary way of tracking progress within a project
+
+##basic commands##
+
+# --"git clone" copy git repo to your local hard drive
+# --"git add" tracks changes to your working git repo
+# --"git push" adds changes from local directory to remote one
+# --"git pull" downloads changes made to a remote directory to a local one
+# --"git commit" adds changes to your git file
+
+#basic flow::
+##<1> add
+##<2> commit
+##<3> push
+
+#initial repo for class
+#https://github.com/jonathanbechtel/DAT-06-24

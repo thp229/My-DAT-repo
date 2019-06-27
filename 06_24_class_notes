@@ -1,0 +1,58 @@
+#What is a data-scientist?
+## "knows more about stats than a programmer, more about programming than statistician"
+
+#Basic skills::
+##<1> Python programming / and R language
+
+##<2> Data collection/Cleaning
+
+##<3> Conceptual fluency with Statistical techniques
+    #descriptive stats
+    #understanding of distributions
+    #regression
+    #different machine learning methods
+
+####################
+## The Python Stack ##
+####################
+
+###Numpy -- linear algebra
+
+###Scipy -- basic stats
+
+###Statsmodels -- advanced stats
+####p_values etc
+
+###Scikit-Learn -- ML
+# ?Tensorflow?
+####predictive modeling
+
+###Pandas -- data munging
+####data cleaning
+
+###Matplotlib -- visualizations
+
+########################################
+
+#definition of Machine Learning::
+##"The broader notion of building statistical artifacts that become more accurate
+## over time based on experience"
+
+#Cost Functions
+##distance between prediction vector and true_answer vector
+###Ex/ euclidean dist for cts data
+
+#types of Machine Learning problems::
+
+#Regression vs Classification
+# --Regression is used to predict cts variables
+# --Classification is used to predict discrete categories
+
+#Supervised (structured) vs Unsupervised (unstructured)
+# --relates to the data sources being used
+
+# --Supervised variables are clearly defined and labeled ex/ Economic Data
+        #think Generalized Linear Models
+# --Unsupervised data is not clearly labeled ex/ Image Data
+        #not trying to solve for something specific
+        #think clustering/grouping based on similarity
