@@ -1,0 +1,56 @@
+##Python Basics##
+
+#if/elif/else
+
+    #random pieces of text, floats, bools, ints all will evaluate to True in python
+    #ex/
+    #if 1 or bool:
+    #   print("this line runs")
+
+
+    #nearly everything except for 0 and empty containers <"",[],{}> will evaluate to True
+    #ex/
+    #if "":
+    #   print("this line will not run")
+
+#lists
+
+    #reversing a list
+    ## -- using my_list[::-1] produces a 'view' of the list, its NOT actually changing the underlying list in memory
+
+    ## -- if we run my_list.reverse(), nothing prints but the list IS changed in memory
+
+    #other methods
+    #my_list.insert(an list index <int>, the value to insert)
+
+    #inserts the item at that specific index of interest
+
+    #my_list.pop() with no argument removes the last item, whatever it is
+
+    #my_list.remove(the value to remove) #finds the index of first occurance of the item inputted and removes that item at that index
+                        #will not remove all instances of that item if it is repeated, to do this we need a loop
+
+    #my_list.clear() #makes the list an empty list
+
+    #list comprehension
+
+    #ex/ create a sublist that of only odd integers
+    new_list = list(range(0,24))
+
+    #method1:
+    odds_list = []
+    for item in new_list:
+        if item % 2 != 0:
+            odds_list.append(item)
+
+    #method2 -- using list comprehension
+    odds_list = [item for item in new_list if item % 2 != 0]
+
+    #generic form :: [k <return value> :: for k in my_list <for loop> :: if C(k) is true]
+    #where C is any condition on the iterator
+
+    #ex
+    odds_list = ["hello" for items in new_list if item %2 != 0]
+
+    #will return ["hello", "hello",...,"hello"] for the number of times
+    #that items is an odd number
