@@ -54,22 +54,20 @@ X = pd.DataFrame.from_dict({"X1":[r.gauss(0,1) for i in range(500)]+[r.gauss(0,1
 }) 
 
 
-#target = 234
-for target in X.index.tolist():
-    
-    neighbors_plot, prediction = kNN(100,target,X)
+#target = set_target
+neighbors_plot, prediction = kNN(100,target,X)
 
-    def viewPlots():
-        fig , ax = plt.subplots(1,2, sharey = False, figsize = (14,5))
-        sns.scatterplot(x  = "X1", y = "X2", hue = "category", data = neighbors_plot, ax = ax[0])
-        sns.scatterplot(x  = "X1", y = "X2", hue = "Y", data = neighbors_plot, ax = ax[1])
-        ax[0].title.set_text("Subset of 100 nearest neighbors to target value")
-        if prediction == list(X.loc[target, :])[2]:
-            ax[1].title.set_text("The decision boundary and target value"+"\n"+"The KNN predicted: "+str(prediction)+"\n"+"The KNN was correct!")
-        else:
-            ax[1].title.set_text("The decision boundary and target value"+"\n"+"The KNN predicted: "+str(prediction)+"\n"+"The KNN was incorrect!")
-        plt.scatter(x=list(X.loc[target, :])[0], y=list(X.loc[target, :])[1], color='r')
-        plt.show()
+def viewPlots():
+    fig , ax = plt.subplots(1,2, sharey = False, figsize = (14,5))
+    sns.scatterplot(x  = "X1", y = "X2", hue = "category", data = neighbors_plot, ax = ax[0])
+    sns.scatterplot(x  = "X1", y = "X2", hue = "Y", data = neighbors_plot, ax = ax[1])
+    ax[0].title.set_text("Subset of 100 nearest neighbors to target value")
+    if prediction == list(X.loc[target, :])[2]:
+        ax[1].title.set_text("The decision boundary and target value"+"\n"+"The KNN predicted: "+str(prediction)+"\n"+"The KNN was correct!")
+    else:
+        ax[1].title.set_text("The decision boundary and target value"+"\n"+"The KNN predicted: "+str(prediction)+"\n"+"The KNN was incorrect!")
+    plt.scatter(x=list(X.loc[target, :])[0], y=list(X.loc[target, :])[1], color='r')
+    plt.show()
 
-    viewPlots()
+viewPlots()
 
